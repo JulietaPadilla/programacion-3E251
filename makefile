@@ -6,6 +6,9 @@ INCLUDE := include
 BIN := bin
 EXE := $(BIN)/$(PROYECTO)
 
+DATOS = tipos
+TYPE := $(BIN)/$(DATOS)
+
 $(EXE) : $(SRC)/main.cpp
 	c++ $< -o $@ $(LIB) $(CXX) -I$(INCLUDE)
 # c++ main.cpp -o programa $(LIB) $(CXX) 
@@ -19,3 +22,9 @@ clean:
 
 # print:
 # 	@echo 'Hola Mundo'
+
+$(TYPE) : $(SRC)/memoria.cpp
+	c++ $< -o $@ $(LIB) $(CXX) 
+
+ejecutar : $(TYPE)
+	./$<
