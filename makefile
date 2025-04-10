@@ -28,3 +28,9 @@ $(TYPE) : $(SRC)/memoria.cpp
 
 ejecutar : $(TYPE)
 	./$<
+
+archivo: bin/archivo
+	./$<
+
+bin/archivo: src/archivo.cpp
+	c++ $< -o $@ -I$(INCLUDE)
