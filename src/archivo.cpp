@@ -22,6 +22,8 @@ int main(int argc, char const * argv[])
     archivo << "Linea 4." << endl;
     archivo << "Linea 5." << endl;
 
+    archivo.close();
+
     //Abrir el archivo para lectura.
     ifstream archivoLectura("archivo.txt");
     if(!archivoLectura.is_open()){
@@ -34,7 +36,7 @@ int main(int argc, char const * argv[])
         cout << line << endl;
     }
     //Cerrar Archivo.
-    archivo.close();
+    archivoLectura.close();
 
     return 0;
 }
