@@ -28,6 +28,7 @@ $(TYPE) : $(SRC)/memoria.cpp
 
 ejecutar : $(TYPE)
 	./$<
+	
 
 archivo: bin/archivo
 	./$<
